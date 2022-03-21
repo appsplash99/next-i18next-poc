@@ -32,3 +32,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Setup
+
+1. yarn create-next-app next-i18next-poc
+2. yarn add next-i18next
+3. setup `next-id8next.config.js`
+4. add translations in `public/locales`
+5. consume with `useTranslation` hook from `next-i18next` package
+
+## current-features
+
+1. default sub-path routing via [NextJS i18n](https://nextjs.org/docs/advanced-features/i18n-routing#sub-path-routing)
+2. default automatic language(locale) detection via [NextJS](https://nextjs.org/docs/advanced-features/i18n-routing#automatic-locale-detection)
+3. scalable Language Translation from [next-i18next](https://github.com/isaachinman/next-i18next)
+
+## upcoming features
+
+1. fetch and consume crowdin translations(in json format) from Crowdin via API/CDN
