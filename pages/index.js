@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { LocaleSwitcher } from "../components/LanguageSwitcher";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -25,8 +24,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <LocaleSwitcher />
-
         <h1 className={styles.title}>{t("site-title")}</h1>
         <p className={styles.description}>{t("site-description")}</p>
 
