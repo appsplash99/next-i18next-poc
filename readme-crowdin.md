@@ -10,4 +10,4 @@
 
 3.  Sample request
 
-        curl -H "Authorization: Bearer YOUR_PERSONAL_TOKEN" "https://YOUR_PROJECT_NAME.crowdin.com/api/v2/projects/2/languages/progress"
+        curl -H "Authorization: Bearer YOUR_PERSONAL_TOKEN" "https://YOUR_ORGANIZATION_NAME.crowdin.com/api/v2/projects/2/languages/progress"
