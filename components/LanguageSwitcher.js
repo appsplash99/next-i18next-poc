@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-export const LocaleSwitcher = () => {
+export const LocaleSwitcher = ({ options }) => {
   const router = useRouter();
   const {
     locale, // selected language
@@ -26,6 +26,10 @@ export const LocaleSwitcher = () => {
         <option value="fr">{"French - français"}</option>
         <option value="hi">{"Hindi - हिन्दी"}</option>
         <option value="tm">{"Tamil - தமிழ்"}</option>
+        {options.length > 0 &&
+          options.map((optionItem) => (
+            <option value={optionItem.id}>{optionItem.name}</option>
+          ))}
       </select>
     </div>
   );
