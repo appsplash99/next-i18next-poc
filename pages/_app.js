@@ -13,41 +13,34 @@ function MyApp({ Component, pageProps }) {
           paddingRight: "1rem",
           alignItems: "center",
           justifyContent: "flex-end",
+          gap: "2rem",
         }}
       >
-        <div
+        <ul
           style={{
             display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
+            gap: "0.5rem",
+            listStyle: "none",
+            alignItems: "center",
           }}
         >
-          <LocaleSwitcher />
-          <ul
-            style={{
-              display: "flex",
-              gap: "0.5rem",
-              listStyle: "none",
-              alignItems: "center",
-            }}
-          >
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>About Us</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog/hello-world">
-                <a>Blog Post</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a>About Us</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/hello-world">
+              <a>Blog</a>
+            </Link>
+          </li>
+        </ul>
+        <LocaleSwitcher />
       </div>
       <Component {...pageProps} />;
     </>

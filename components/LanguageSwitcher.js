@@ -18,8 +18,6 @@ export const LocaleSwitcher = () => {
         display: "flex",
         alignItems: "center",
         gap: "0.5rem",
-        alignSelf: "flex-end",
-        marginBottom: "1.5rem",
       }}
     >
       <label>Choose a Language:</label>
