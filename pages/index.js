@@ -1,3 +1,5 @@
+import axios from "axios";
+import { useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useTranslation } from "next-i18next";
@@ -14,6 +16,16 @@ export async function getStaticProps({ locale }) {
 
 export default function Home() {
   const { t } = useTranslation("common");
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get(
+        "api/crowdin" + "projects/2/languages/mr/translations"
+      );
+      console.log(data);
+    };
+    getData();
+  });
 
   return (
     <div className={styles.container}>
